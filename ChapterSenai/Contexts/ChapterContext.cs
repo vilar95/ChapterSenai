@@ -21,8 +21,7 @@ namespace ChapterSenai.Contexts
             if (!optionsBuilder.IsConfigured)
             {
                 //Cada provedor tem sua sintaxe para especificação
-                optionsBuilder.UseSqlServer("" +
-                    "Data Source = DESKTOP-L6A6NA4\\LOCALDB#B043C77D ; initial catalog = Chapter; Integrated Security = true");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Chapter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
         // dbset representa as entidades que serão utilizadas nas operações de leitura, criação, atualização e deleção
