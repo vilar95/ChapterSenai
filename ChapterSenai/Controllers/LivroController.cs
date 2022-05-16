@@ -1,5 +1,6 @@
 ﻿using ChapterSenai.Models;
 using ChapterSenai.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,8 +19,8 @@ namespace ChapterSenai.Controllers
 
     // atributo para habilitar comportamentos especificos de API, como status, retorno
     [ApiController]
-
     // [ControllerBase] - requisicoes HTTP
+    [Authorize]
     public class LivroController : ControllerBase
     {
         private readonly LivroRepository _livroRepository;
