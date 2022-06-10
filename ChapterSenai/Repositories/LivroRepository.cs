@@ -33,7 +33,7 @@ namespace ChapterSenai.Repositories
             _context.SaveChanges();
         }
 
-        public void Atualizar(int id,Livro livro)
+        public void Atualizar(int id, Livro livro)
         {
             Livro livroBuscado = _context.Livros.Find(livro);
 
